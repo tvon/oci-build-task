@@ -17,3 +17,4 @@ FROM moby/buildkit:master AS task
   ENTRYPOINT ["task"]
 
 FROM task
+RUN apk --update add openssh-client

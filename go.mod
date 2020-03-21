@@ -18,5 +18,5 @@ require (
 	github.com/u-root/u-root v6.0.0+incompatible
 	github.com/vbauerster/mpb v3.4.0+incompatible
 	github.com/vrischmann/envconfig v1.2.0
-	golang.org/x/crypto v0.0.0-20190820162420-60c769a6c586 // indirect
+	golang.org/x/crypto v0.0.0-20190820162420-60c769a6c586
 )
