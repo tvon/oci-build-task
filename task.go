@@ -73,12 +73,12 @@ func Build(buildkitd *Buildkitd, outputsDir string, req Request) (Response, erro
 		)
 	}
 
-    if cfg.PublicKey != "" {
+    if cfg.PrivateKey != "" {
         // This might be late to be doing this.
-        socket := SpawnSshagent()
+        socket := SpawnSshagent(cfg.PrivateKey)
 
 		buildctlArgs = append(buildctlArgs,
-        "--ssh", "default="+socket,
+            "--ssh", "default="+socket,
 		)
     }
 
