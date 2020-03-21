@@ -17,7 +17,7 @@ case $GITHUB_REF in
       echo $version | cut -d. -f1
       echo $version | cut -d. -f1,2
       echo $version | cut -d. -f1,2,3
-    } | uniq >> additional_tags
+    } | uniq >>additional_tags
 
     ;;
 
@@ -33,7 +33,7 @@ esac
 exec /opt/resource/out . <<EOF
 {
   "source": {
-    "repository": "vito/oci-build-task",
+    "repository": "$REPOSITORY",
     "tag": "$tag",
     "username": "$DOCKER_USERNAME",
     "password": "$DOCKER_PASSWORD"

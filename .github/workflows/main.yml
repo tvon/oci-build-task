@@ -32,5 +32,6 @@ jobs:
     - uses: docker://concourse/registry-image-resource
       with: {entrypoint: scripts/push-image}
       env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        REPOSITORY: docker.pkg.github.com/${{ github.repository }}/oci-build-task
+        DOCKER_USERNAME: ${{ github.actor }}
+        DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
